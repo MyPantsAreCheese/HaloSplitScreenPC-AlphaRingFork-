@@ -72,36 +72,27 @@ For Running on Steam Deck/Linux, add the following command in the Steam Game Lau
 WINEDLLOVERRIDES="WTSAPI32=n,b" %command%
 ```
 
-#### Batocera Linux
+#### Batocera Linux / Steam Deck
 
-For Batocera Linux users, additional setup is required:
+Works with **any Proton version** (Proton 9.0, Proton Experimental, Proton GE, etc.)
 
-1. **Download Proton GE**: Get the latest `tar.gz` from the [Proton GE releases page](https://github.com/GloriousEggroll/proton-ge-custom/releases) (Proton GE 10-15 or newer recommended)
-
-2. **Install Proton GE**: Unpack the archive to your Steam compatibility tools folder:
-   ```
-   ~/.steam/root/compatibilitytools.d/
-   ```
-
-3. **Restart Steam**: Close and reopen the Steam client for it to detect the new Proton version
-
-4. **Configure the game**:
+1. **Configure the game**:
    - Right-click MCC → Properties → Compatibility
    - Enable "Force the use of a specific Steam Play compatibility tool"
-   - Select **Proton GE 10-15** (or your installed version)
+   - Select any Proton version (Proton 9.0, Experimental, or Proton GE all work)
 
-5. **Set launch options**: Add the following to Steam Launch Options:
+2. **Set launch options**: Add the following to Steam Launch Options:
    ```
    WINEDLLOVERRIDES="WTSAPI32=n,b" %command%
    ```
 
-6. **Controller Setup (Important for non-Xbox controllers)**:
+3. **Controller Setup (Important for non-Xbox controllers)**:
    - For 8BitDo and other third-party controllers, enable **Steam Input** for the controller
    - Go to Steam → Settings → Controller → Enable "Xbox Configuration Support"
    - This allows Steam to translate your controller inputs to XInput, which MCC and AlphaRing expect
    - Without this, some buttons (like A or stick clicks) may not be detected
 
-> **Note:** The unofficial Batocera add-ons version of the Steam client has been tested and works with this setup.
+> **Note:** Tested on Batocera Linux with the unofficial Batocera add-ons Steam client.
 
 ### Usage
 Toggle menu: `F4` or `Controller Back` + `Controller Start`
