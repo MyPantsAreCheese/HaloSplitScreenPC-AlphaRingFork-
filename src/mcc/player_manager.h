@@ -34,7 +34,7 @@ constexpr const char* k_player_input_device_names[] = {
 	"Keyboard/Mouse",
 };
 
-class c_player_manager : i_manager {
+class c_player_manager : i_manager { 
 public:
 	int initialize() override;
 	int shutdown() override;
